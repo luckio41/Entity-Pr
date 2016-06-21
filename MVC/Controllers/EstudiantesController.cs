@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Datos;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -6,7 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using Datos;
+using Newtonsoft.Json;
 
 namespace MVC.Controllers
 {
@@ -20,6 +21,14 @@ namespace MVC.Controllers
             var estudiante = db.Estudiante.Include(e => e.Asignatura1);
             return View(estudiante.ToList());
         }
+
+        // Return Estudiantes formato JSON
+        /*public ActionResult GetStudents()
+        {
+            var student = db.Estudiante.Include(e => e.Asignatura1);
+            var serializedData = JsonConvert.SerializeObject(student.ToList());
+           
+        }*/
 
         // GET: Estudiantes/Details/5
         public ActionResult Details(int? id)

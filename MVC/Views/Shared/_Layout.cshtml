@@ -8,7 +8,7 @@
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
-<body>
+<body ng-app="App">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -21,9 +21,12 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <!--<li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>-->
+                    <li>@Html.ActionLink("Estudiantes", "Index", "Estudiantes")</li>
+                    <li>@Html.ActionLink("Profesor", "Index", "Profesor")</li>
+                    <li>@Html.ActionLink("Asignaturas", "Index", "Asignaturas")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -39,6 +42,8 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/app")
     @RenderSection("scripts", required: false)
 </body>
 </html>
