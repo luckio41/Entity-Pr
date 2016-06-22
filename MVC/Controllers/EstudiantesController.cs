@@ -22,14 +22,6 @@ namespace MVC.Controllers
             return View(estudiante.ToList());
         }
 
-        // Return Estudiantes formato JSON
-        /*public ActionResult GetStudents()
-        {
-            var student = db.Estudiante.Include(e => e.Asignatura1);
-            var serializedData = JsonConvert.SerializeObject(student.ToList());
-           
-        }*/
-
         // GET: Estudiantes/Details/5
         public ActionResult Details(int? id)
         {
